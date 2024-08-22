@@ -27,8 +27,8 @@ with `ps`, `pgrep`, `pkill`, `pkill`, `exit`, and `trap`.
   * [4-to_infinity_and_beyond](./4-to_infinity_and_beyond): Bash script that displays
   `To infinity and beyond` indefinitely with a `sleep 2` in between each iteration.
 
-* **5. Don't stop me now!**
-  * [5-dont_stop_me_now](./5-dont_stop_me_now): Bash script that kills the
+* **5. Kill me now**
+  * [5-kill_me_now](./5-kill_me_now): Bash script that kills the
   [4-to_infinity_and_beyond](./4-to_infinity_and_beyond) process using `kill`.
 
 * **6. Stop me if you can**
@@ -79,3 +79,4 @@ with `ps`, `pgrep`, `pkill`, `pkill`, `exit`, and `trap`.
   * [102-zombie.c](./102-zombie.c): C program that creates five zombie processes.
   * For every zombie created, displays `Zombie process created, PID:
   <ZOMBIE_PID>`.
+

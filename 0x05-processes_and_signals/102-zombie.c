@@ -1,3 +1,8 @@
+/*
+ * File: 102-zombie.c
+ * Auth: Musa_kalamz A Ogunsolu
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>

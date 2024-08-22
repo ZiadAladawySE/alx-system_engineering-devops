@@ -5,7 +5,7 @@ provided a personal server by ALX. I learned how to use `scp`
 and Fabric to transfer files to my server. Additionally, I completed a basic
 configuration of the server using Nginx.
 
-The server is accessible at [bdbnb.site](http://bdbnb.site).
+The server is accessible at [musahub.tech](http://musahub.tech).
 
 ## Tasks :page_with_curl:
 
@@ -24,7 +24,7 @@ The server is accessible at [bdbnb.site](http://bdbnb.site).
   that configures a new Ubuntu machine with Nginx.
   * Nginx listens on port 80.
   * When querying Nginx at its root `/` with a `curl` GET request,
-  it returns a page containing the string `Hello World`.
+  it returns a page containing the string `Holberton School`.
 
 * **2. Setup a domain name**
   * [2-setup_a_domain_name](./2-setup_a_domain_name): A text file containing
@@ -65,3 +65,4 @@ The server is accessible at [bdbnb.site](http://bdbnb.site).
     of the remote server.
   * `clean`
     * Deletes the archive `holbertonwebapp.tar.gz` in the local directory.
+

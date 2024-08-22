@@ -1,6 +1,6 @@
 # Loops, conditions and parsing
 
-In this project, I began working loops and conditionals statements in Bash.
+In this project, I began working loops and conditionals statemetns in Bash.
 
 ## Helper File :raised_hands:
 
@@ -60,13 +60,13 @@ tasks `102` and `103`.
 
 * **9. To file, or not to file**
   * [9-to_file_or_not_to_file](./9-to_file_or_not_to_file): Bash script that gives information
-  about the `bestschool` file.
-    * If the file exists, displays: `school file exists`.
-    * If the file does not exist, displays: `school file does not exist`.
-    * If the file exists and is empty, displays: `school file is empty`.
-    * If the file exists and is not empty, displays: `school file is not
+  about the `holbertonschool` file.
+    * If the file exists, displays: `bestschool file exists`.
+    * If the file does not exist, displays: `bestschool file does not exist`.
+    * If the file exists and is empty, displays: `bestschool file is empty`.
+    * If the file exists and is not empty, displays: `bestschoolfile is not
     empty`.
-    * If the file exists and is a regular file, displays: `school file
+    * If the file exists and is a regular file, displays: `bestschool file
     is a regular file`.
     * Otherwise, displays nothing.
 
@@ -103,3 +103,4 @@ tasks `102` and `103`.
   `OCCURRENCE_NUMBER IP HTTP_CODE`.
   * Logs are grouped in order of greatest to lowest number of visitors.
   * Uses `awk`.
+

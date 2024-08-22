@@ -3,8 +3,6 @@
 In this project, I learned how to use regular expressions. I practiced building
 them using Ruby's Oniguruma library.
 
-All code in this directory was tested using [Rubular](https://rubular.com/). Rubular is a Ruby-based regular expression editor. It's a handy way to test regular expressions as you write them.
-
 ## Tasks :page_with_curl:
 
 _Note: Each Ruby script in the project matches regular expressions based on an
@@ -52,3 +50,4 @@ argument passed to it via the command line._
     * `[RECEIVER]` is the receiver phone number or name (including country code
     if present).
     * `[FLAGS]` is the flags that were used.
+
