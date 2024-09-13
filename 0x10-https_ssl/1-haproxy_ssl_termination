@@ -2,7 +2,7 @@ global
 	log /dev/log	local0
 	log /dev/log	local1 notice
 	chroot /var/lib/haproxy
-	stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
+	stats socket /run/haproxy/admin.sock mode 660 level admin
 	stats timeout 30s
 	user haproxy
 	group haproxy
@@ -33,21 +33,28 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for aysuarex.tech
-frontend aysuarex.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 aysuarex.tech-backend
+frontend website-frontend_http
+        bind *:80
+        mode http
+        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+        option forwardfor
+        http-request add-header X-Forwarded-Proto http if !letsencrypt-acl
+        use_backend letsencrypt-backend if letsencrypt-acl
+        default_backend website-backend
 
+frontend website-frontend_https
+        bind *:443 ssl crt /etc/haproxy/certs/underspace.tech
+        mode http
+        option forwardfor
+        http-request add-header X-Forwarded-Proto https
+        default_backend website-backend
 
-frontend  aysuarex.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/aysuarex.tech.pem
-	http-request set-header X-Forwarded-Proto https
-        default_backend aysuarex.tech-backend
-
-
-backend aysuarex.tech-backend
+backend website-backend
         balance roundrobin
-        server 914-web-01 44.210.150.159:80 check
-        server 914-web-02 35.173.47.15:80 check
-# end of parameters
+        mode http
+        server web1 18.206.232.58:80 check
+        server web2 52.86.82.162:80 check
+
+backend letsencrypt-backend
+        mode http
+        server standalone_certbot 127.0.0.1:8080
